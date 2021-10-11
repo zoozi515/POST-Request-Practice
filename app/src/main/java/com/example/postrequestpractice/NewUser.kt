@@ -23,7 +23,7 @@ class NewUser  : AppCompatActivity() {
 
         savebtn.setOnClickListener {
 
-            var f = Users.UserDetails(name.text.toString(), location.text.toString())
+            var f = Users.UserDetails(name.text.toString(), location.text.toString(), 0)
 
             addSingleuser(f, onResult = {
                 name.setText("")

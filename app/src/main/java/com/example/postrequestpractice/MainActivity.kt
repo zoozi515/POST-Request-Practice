@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         progressDialog.setMessage("Please wait")
         progressDialog.show()
 
+        //Get User
         if (apiInterface != null) {
             apiInterface.getUser()?.enqueue(object :Callback<List<Users.UserDetails>> {
                 override fun onResponse(
@@ -42,7 +43,6 @@ class MainActivity : AppCompatActivity() {
                 }
             })
         }
-
     }
 
     fun addnew(view: android.view.View) {
